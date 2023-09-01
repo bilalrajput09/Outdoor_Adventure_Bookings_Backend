@@ -2,13 +2,11 @@ module Api
   module V1
     class UsersController < ApplicationController
       def signup
-        @user = User.new(user_params)
-        if @user.save
-          render json: { message: 'user created successfully' }, content_type: 'application/json',
-                 status: 'created', user: @user
+        user = User.new(user_params)
+        if user.save
+          render json: { message: 'User created successfully', user: }, status: :created
         else
-          render json: { errors: @user.errors.full_messages }, content_type: 'application/json',
-                 status: 'bad request'
+          render json: { error: user.errors.full_messages }, status: :unprocessable_entity
         end
       end
 
