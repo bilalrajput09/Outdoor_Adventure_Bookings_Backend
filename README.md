@@ -97,9 +97,22 @@ You can deploy this project using Render
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Bilal Ahmed**
+- [github](https://github.com/bilalrajput09)
+- [portfolio](https://bilalrajput09.github.io/My-Portfolio/)
+- [linkedin](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
+
 👤 **Kaleb Bekele**
 - [github](https://github.com/kalbek)
 - [portfolio](https://kalbek.github.io/Portfolio/)
+- [linkedin](https://www.linkedin.com/in/kaleb-nuramo/)
+
+👤 **Daniel Kigozi**
+- [github](https://github.com/Daniel-Kigozi)
+- [portfolio](https://www.linkedin.com/in/daniel-kigozi-375182208/)
+- [twitter](https://twitter.com/DanielKigozi15)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +146,6 @@ If you like this project give it a star on github.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Gregorie Vella](https://www.behance.net/gregoirevella) for providing [this design guidline](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) in behance.
 We would like to thank Microverse for guiding us on the development of this project. We also like to acknowledge our code reviewers who guided us on creating this project as a two app with separate repos. (Backend and Frontend) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
