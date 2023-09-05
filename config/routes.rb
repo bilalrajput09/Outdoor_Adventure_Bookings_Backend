@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -11,9 +10,9 @@ Rails.application.routes.draw do
       get 'signout', to: 'users#signout'
       get 'current_user', to: 'users#current_user'
       get 'adventures', to: 'adventures#index'
-      resources :reservations, only: [:create ]
-      post "get_reservations", to: "reservations#get_reservations"
-      delete "delete_reservation", to: "reservations#destroy"
+      resources :reservations, only: [:create]
+      post 'get_reservations', to: 'reservations#get_reservations'
+      delete 'delete_reservation', to: 'reservations#destroy'
     end
   end
 end
