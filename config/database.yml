@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: adventures
+  database: outdoor_adventure_bookings_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -32,9 +32,9 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: 123
+  password: admin
 
-  # Connect on a TCP socket. Omitted by default since the client uses a 
+  # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
   host: localhost
