@@ -6,21 +6,21 @@ module Api
         render json: @adventures
       end
 
-      def create_adventure
-        @user = User.find_by(id: params[:user_id])
+      def create
+        @adventure = Adventure.new(adventure_params)
+        @adventure.inspect
+        if @adventure.save
+          render json: { message: 'Adventure created successfully', adventure: @adventure }, status: :created
         else
-          @adventure = Adventure.new(adventure_params)
-      
-          if @adventure.save
-            render json: { message: 'Adventure created successfully', user: @user, adventure: @adventure }, status: :created
-          else
-            render json: { errors: @user.errors.full_messages }, status: :bad_request
-          end
+          render json: { errors: @adventure.errors.full_messages }, status: :bad_request
+        end
       end
-
+      
+      private
+      
       def adventure_params
         params.require(:adventure).permit(:user_id, :name, :picture, :description)
-      end
+      end      
     end
   end
 end
