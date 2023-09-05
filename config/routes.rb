@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'current_user', to: 'users#current_user'
       get 'adventures', to: 'adventures#index'
       resources :reservations, only: [:create]
-      post 'get_reservations', to: 'reservations#get_reservations'
+      post 'fetch_reservations', to: 'reservations#fetch_reservations'
       delete 'delete_reservation', to: 'reservations#destroy'
     end
   end

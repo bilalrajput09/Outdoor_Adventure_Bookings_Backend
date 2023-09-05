@@ -18,7 +18,7 @@ module Api
         end
       end
 
-      def get_reservations
+      def fetch_reservations
         @reservations = Reservation.where(user_id: params[:currentUserID])
         @reservations_array = @reservations.to_a
         if @reservations
