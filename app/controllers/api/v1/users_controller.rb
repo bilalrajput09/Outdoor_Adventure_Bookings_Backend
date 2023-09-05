@@ -3,12 +3,12 @@ module Api
     class UsersController < ApplicationController
       def signup
         @user = User.find_by(username: params[:username])
-
+      
         if @user
           render json: { errors: 'Username taken' }, status: :bad_request
         else
           @user = User.new(user_params)
-
+      
           if @user.save
             render json: { message: 'User created successfully', user: @user }, status: :created
           else
