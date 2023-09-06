@@ -2,7 +2,6 @@ module Api
   module V1
     class ReservationsController < ApplicationController
       def create
-        byebug
         current_user = User.find(params[:currentUserID])
         adventure = Adventure.find(params[:adventureID])
 
@@ -15,7 +14,7 @@ module Api
           render json: { message: 'Reservation created successfully', reservations: @reservations_array },
                  status: 201
         else
-          render json: { message: "Reservation is not created." }, status: :bad_request
+          render json: { message: 'Reservation is not created.' }, status: :bad_request
         end
       end
 
