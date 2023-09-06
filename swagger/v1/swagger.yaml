@@ -4,11 +4,11 @@ info:
   title: API V1
   version: v1
 paths:
-  /api/v1/adventures:
+  "/api/v1/adventures":
     get:
       summary: Get index of adventures
       tags:
-        - Adventures
+      - Adventures
       responses:
         '200':
           description: List of adventures retrieved
@@ -32,12 +32,33 @@ paths:
                     updated_at:
                       type: datetime
                   required:
-                    - id
-                    - name
-                    - picture
-                    - description
+                  - id
+                  - name
+                  - picture
+                  - description
+  "/api/v1/fetch_reservations":
+    post:
+      summary: Fetch Reservations
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '200':
+          description: Reservations fetched successfully
+        '204':
+          description: No reservation found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currentUserID:
+                  type: integer
+              required:
+              - currentUserID
 servers:
-  - url: http://{defaultHost}
-    variables:
-      defaultHost:
-        default: localhost:3001
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000/

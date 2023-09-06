@@ -19,6 +19,7 @@ module Api
       end
 
       def fetch_reservations
+        byebug
         @reservations = Reservation.where(user_id: params[:currentUserID])
         @reservations_array = @reservations.to_a
         if @reservations
