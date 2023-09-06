@@ -7,7 +7,8 @@ ruby '3.2.2'
 gem 'byebug'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
-gem 'syck'
+gem 'rspec-rails'
+gem 'rswag'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'

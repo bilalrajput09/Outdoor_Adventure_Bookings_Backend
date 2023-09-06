@@ -1,0 +1,43 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  /api/v1/adventures:
+    get:
+      summary: Get index of adventures
+      tags:
+        - Adventures
+      responses:
+        '200':
+          description: List of adventures retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    description:
+                      type: text
+                    picture:
+                      type: string
+                    created_at:
+                      type: datetime
+                    updated_at:
+                      type: datetime
+                  required:
+                    - id
+                    - name
+                    - picture
+                    - description
+servers:
+  - url: http://{defaultHost}
+    variables:
+      defaultHost:
+        default: localhost:3001
