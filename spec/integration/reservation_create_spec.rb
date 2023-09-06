@@ -1,20 +1,21 @@
 require 'swagger_helper'
 
 describe "Rservations API" do
-    path "/api/v1/fetch_reservations" do
-        post "Fetch Reservations" do
-            tags "Reservations"
+    path "/api/v1/reservations" do
+        post "Create Reservations" do
+            tags "Create Reservations"
             consumes "application/json"
-            parameter name: :currentUserID, in: :body, schema: {
+            parameter name: :reservation_params, in: :body, schema: {
                 type: :object,
                 properties: {
-                    currentUserID: { type: :integer }
+                    currentUserID: { type: :integer },
+                    adventureID: { type: :integer }
                 },
-                required: ["currentUserID"]
+                required: ["currentUserID", "adventureID"]
             }
 
-            response "200", "Reservations fetched successfully" do
-                schema type: :array,
+            response "201", "Reservation created successfully" do
+                schema type: :object,
                 properties: {
                     message: { type: :string },
                     reservations: {
@@ -37,6 +38,7 @@ describe "Rservations API" do
                 required: %w[message reservations]
 
                 let(:currentUserID) { 20 }
+                let(:adventureID) { 5 }
                 run_test!
             end
 
@@ -48,6 +50,7 @@ describe "Rservations API" do
                 required: %w[message]
 
                 let(:currentUserID) { 20 }
+                let(:adventureID) { 5 }
                 run_test!
             end
         end

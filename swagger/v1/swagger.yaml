@@ -36,6 +36,30 @@ paths:
                   - name
                   - picture
                   - description
+  "/api/v1/reservations":
+    post:
+      summary: Create Reservations
+      tags:
+      - Create Reservations
+      parameters: []
+      responses:
+        '201':
+          description: Reservation created successfully
+        '204':
+          description: No reservation found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currentUserID:
+                  type: integer
+                adventureID:
+                  type: integer
+              required:
+              - currentUserID
+              - adventureID
   "/api/v1/fetch_reservations":
     post:
       summary: Fetch Reservations

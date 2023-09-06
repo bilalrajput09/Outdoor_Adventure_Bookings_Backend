@@ -2,6 +2,7 @@ module Api
   module V1
     class ReservationsController < ApplicationController
       def create
+        byebug
         current_user = User.find(params[:currentUserID])
         adventure = Adventure.find(params[:adventureID])
 
@@ -12,14 +13,13 @@ module Api
           @reservations_array = @reservations.to_a
 
           render json: { message: 'Reservation created successfully', reservations: @reservations_array },
-                 status: :created
+                 status: 201
         else
-          render json: { errors: reservation.errors.full_messages }, status: :bad_request
+          render json: { message: "Reservation is not created." }, status: :bad_request
         end
       end
 
       def fetch_reservations
-        byebug
         @reservations = Reservation.where(user_id: params[:currentUserID])
         @reservations_array = @reservations.to_a
         if @reservations
