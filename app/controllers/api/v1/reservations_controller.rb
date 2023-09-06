@@ -7,6 +7,7 @@ module Api
 
         reservation = Reservation.new(user_id: current_user.id, adventure_id: adventure.id)
 
+        reservation.inspect
         if reservation.save
           @reservations = Reservation.where(user_id: params[:currentUserID])
           @reservations_array = @reservations.to_a

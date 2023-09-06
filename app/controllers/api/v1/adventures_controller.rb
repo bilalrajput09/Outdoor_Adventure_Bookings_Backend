@@ -23,6 +23,13 @@ module Api
         end
       end
 
+      def show
+        @adventure = Adventure.find(params[:id])
+        render json: @adventure
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Adventure not found' }, status: :not_found
+      end
+
       private
 
       def adventure_params
