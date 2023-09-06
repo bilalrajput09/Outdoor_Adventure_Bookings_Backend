@@ -12,9 +12,9 @@ module Api
           @reservations_array = @reservations.to_a
 
           render json: { message: 'Reservation created successfully', reservations: @reservations_array },
-                 status: :created
+                 status: 201
         else
-          render json: { errors: reservation.errors.full_messages }, status: :bad_request
+          render json: { message: 'Reservation is not created.' }, status: :bad_request
         end
       end
 
