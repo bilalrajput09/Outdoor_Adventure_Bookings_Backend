@@ -2,8 +2,8 @@ require 'swagger_helper'
 
 describe "Rservations API" do
     path "/api/v1/reservations" do
-        post "Create Reservations" do
-            tags "Create Reservations"
+        post "Reservations" do
+            tags "Reservations"
             consumes "application/json"
             parameter name: :reservation_params, in: :body, schema: {
                 type: :object,

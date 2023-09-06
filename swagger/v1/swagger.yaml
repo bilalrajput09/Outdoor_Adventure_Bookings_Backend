@@ -38,9 +38,9 @@ paths:
                   - description
   "/api/v1/reservations":
     post:
-      summary: Create Reservations
+      summary: Reservations
       tags:
-      - Create Reservations
+      - Reservations
       parameters: []
       responses:
         '201':
