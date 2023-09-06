@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'login', to: 'users#login'
       post 'signup', to: 'users#signup'
+      post 'create_adventure', to: 'adventures#create'
       get 'signout', to: 'users#signout'
       get 'current_user', to: 'users#current_user'
       get 'adventures', to: 'adventures#index'
