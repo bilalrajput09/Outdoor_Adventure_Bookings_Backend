@@ -19,6 +19,7 @@ module Api
           render json: { errors: reservation.errors.full_messages }, status: :bad_request
         end
       end
+
       # fetch reservations
       def fetch_reservations
         @reservations = Reservation.where(user_id: params[:currentUserID])
@@ -29,6 +30,7 @@ module Api
           render json: { message: 'There are no reservations currently' }, status: :no_data
         end
       end
+
       # delete reservations
       def destroy
         reservation = Reservation.find(params[:reservation_id])
