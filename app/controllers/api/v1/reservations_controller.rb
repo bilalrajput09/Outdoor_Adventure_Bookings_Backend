@@ -1,6 +1,7 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
+      # create reservations
       def create
         current_user = User.find(params[:currentUserID])
         adventure = Adventure.find(params[:adventureID])
@@ -19,6 +20,7 @@ module Api
         end
       end
 
+      # fetch reservations
       def fetch_reservations
         @reservations = Reservation.where(user_id: params[:currentUserID])
         @reservations_array = @reservations.to_a
@@ -29,6 +31,7 @@ module Api
         end
       end
 
+      # delete reservations
       def destroy
         reservation = Reservation.find(params[:reservation_id])
         if reservation.destroy
