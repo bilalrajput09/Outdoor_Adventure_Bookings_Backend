@@ -16,12 +16,12 @@ Rails.application.routes.draw do
       post 'fetch_reservations', to: 'reservations#fetch_reservations'
       delete 'delete_reservation', to: 'reservations#destroy'
 
-      
-    resources :adventures do
-      member do
-        get 'show' # Define the 'show' action for an individual adventure
+
+      resources :adventures do
+        member do
+          get 'show' # Define the 'show' action for an individual adventure
+        end
       end
-    end
     end
   end
 end

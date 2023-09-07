@@ -18,7 +18,7 @@ module Api
           end
         else
           # if the adventure with the given name already exists render a message
-          render json: { message: 'Adventure with the same name already exists', adventure: @adventure },
+          render json: { message: 'An adventure with the same name already exists', adventure: @adventure },
                  status: :conflict
         end
       end
