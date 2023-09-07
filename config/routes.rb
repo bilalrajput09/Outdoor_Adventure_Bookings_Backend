@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       resources :adventures do
         member do
           get 'show' # Define the 'show' action for an individual adventure
+          delete 'destroy' # Define the 'destroy' action for deleting an adventure
         end
       end
     end
