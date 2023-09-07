@@ -30,6 +30,14 @@ module Api
         render json: { error: 'Adventure not found' }, status: :not_found
       end
 
+      def destroy
+        @adventure = Adventure.find(params[:id])
+        @adventure.destroy
+        render json: { message: 'Adventure deleted successfully' }
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Adventure not found' }, status: :not_found
+      end
+
       private
 
       def adventure_params
