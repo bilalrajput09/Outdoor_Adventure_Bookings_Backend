@@ -36,6 +36,32 @@ paths:
                   - name
                   - picture
                   - description
+    post:
+      summary: Create Adventure
+      tags:
+      - Adventures
+      parameters: []
+      responses:
+        '201':
+          description: Adventure created successfully
+        '204':
+          description: Adventure creation error.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                name:
+                  type: string
+                picture:
+                  type: string
+                description:
+                  type: text
+              required:
+              - name
   "/api/v1/reservations":
     post:
       summary: Reservations
