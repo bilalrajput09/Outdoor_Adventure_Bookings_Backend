@@ -8,10 +8,10 @@ describe 'Adventures API' do
       parameter name: :adventure_params, in: :body, schema: {
         type: :object,
         properties: {
-          user_id: {type: :integer},
-          name: {type: :string},
-          picture: {type: :string},
-          description: {type: :text}
+          user_id: { type: :integer },
+          name: { type: :string },
+          picture: { type: :string },
+          description: { type: :text }
         },
         required: %w[name]
       }
@@ -25,11 +25,11 @@ describe 'Adventures API' do
                    items: {
                      type: :object,
                      properties: {
-                       id: {type: :integer},
-                       user_id: {type: :integer},
-                       name: {type: :string},
-                       picture: {type: :string},
-                       description: {type: :text},
+                       id: { type: :integer },
+                       user_id: { type: :integer },
+                       name: { type: :string },
+                       picture: { type: :string },
+                       description: { type: :text },
                        created_at: { type: :datetime },
                        updated_at: { type: :datetime }
                      },
