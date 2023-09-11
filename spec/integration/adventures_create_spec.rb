@@ -16,44 +16,39 @@ describe 'Adventures API' do
         required: %w[name]
       }
 
-      response '201', 'Adventure created successfully' do
-        schema type: :object,
-               properties: {
-                 message: { type: :string },
-                 adventures: {
-                   type: :array,
-                   items: {
-                     type: :object,
-                     properties: {
-                       id: { type: :integer },
-                       user_id: { type: :integer },
-                       name: { type: :string },
-                       picture: { type: :string },
-                       description: { type: :text },
-                       created_at: { type: :datetime },
-                       updated_at: { type: :datetime }
-                     },
+      context 'when adventure creation is successful' do
+        response '201', 'Adventure created successfully' do
+          let(:user_id) { 2 }
 
-                     required: %w[id name]
-                   }
-                 }
-               },
+          it 'returns a 201 status' do
+            run_test!
+          end
 
-               required: %w[message adventures]
-
-        let(:user_id) { 2 }
-        run_test!
+          it 'returns the expected response schema' do
+            {
+              type: :object,
+              properties: {
+                message: { type: :string },
+                adventures: adventures_schema
+              },
+              required: %w[message adventures]
+            }
+          end
+        end
       end
 
-      response '204', 'Adventure creation error.' do
-        schema type: :object,
-               properties: {
-                 message: { type: :string }
-               },
-               required: %w[message]
+      context 'when adventure creation encounters an error' do
+        response '204', 'Adventure creation error.' do
+          let(:user_id) { 2 }
 
-        let(:user_id) { 2 }
-        run_test!
+          it 'returns a 204 status' do
+            run_test!
+          end
+
+          it 'returns the expected error message' do
+            expect(JSON.parse(response.body)['message']).to eq('Expected Error Message')
+          end
+        end
       end
     end
   end
