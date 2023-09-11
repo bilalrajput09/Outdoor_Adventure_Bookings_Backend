@@ -62,6 +62,41 @@ paths:
                   type: text
               required:
               - name
+  "/api/v1/adventures/{id}":
+    delete:
+      summary: Delete Adventure
+      tags:
+      - Adventures
+      parameters:
+      - name: id
+        in: path
+        description: Adventure ID
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Adventure deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                - message
+        '404':
+          description: Adventure not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
   "/api/v1/reservations":
     post:
       summary: Reservations
