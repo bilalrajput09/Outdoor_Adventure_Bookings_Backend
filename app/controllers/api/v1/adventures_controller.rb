@@ -1,11 +1,15 @@
 module Api
   module V1
     class AdventuresController < ApplicationController
+      # GET /api/v1/adventures
+      # Retrieve a list of all adventures
       def index
         @adventures = Adventure.all
         render json: @adventures
       end
 
+      # POST /api/v1/adventures
+      # Create a new adventure or return an existing one if it has the same name
       def create
         @adventure = Adventure.find_or_initialize_by(name: adventure_params[:name])
         # check if adventure exist, if not procceed with creation
@@ -23,6 +27,8 @@ module Api
         end
       end
 
+      # GET /api/v1/adventures/:id
+      # Retrieve details of a specific adventure by its ID
       def show
         @adventure = Adventure.find(params[:id])
         render json: @adventure
@@ -30,6 +36,8 @@ module Api
         render json: { error: 'Adventure not found' }, status: :not_found
       end
 
+      # DELETE /api/v1/adventures/:id
+      # Delete a specific adventure by its ID
       def destroy
         @adventure = Adventure.find(params[:id])
         @adventure.destroy
