@@ -25,9 +25,11 @@
 <!-- PROJECT DESCRIPTION -->
 - [Link to Frontend](https://github.com/bilalrajput09/Outdoor-Adventure-Bookings)
 
+- [DEPLOYMENT]()
+
 # 📖 Outdoor_Adventure_Bookings_Backend <a name="about-project"></a>
 
-The Outdoor_Adventure_Bookings_Backend is a mobile web application where you can manage your adventures: you have a list of adventures to choose from, so you have a choice to choose from.
+AdventureBooking is your gateway to thrilling outdoor experiences. Easily discover, plan, and book your next adrenaline-packed adventure, whether it's hiking in the wilderness, conquering mountain peaks, or exploring hidden gems. Adventure awaits – start your journey today!"
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -100,12 +102,6 @@ Example command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤**Daniel Kigozi**
-
-- GitHub: [Daniel-Kigozi](https://github.com/Daniel-Kigozi)
-- Twitter: [@DanielKigozi15](https://twitter.com/@DanielKigozi15)
-- LinkedIn: [daniel-kigozi-375182208/](https://www.linkedin.com/in/daniel-kigozi-375182208/)
-
 👤 **Bilal Ahmed**
 
 - GitHub: [@bilalrajput09](https://github.com/bilalrajput09)
@@ -117,6 +113,12 @@ Example command:
 - [github](https://github.com/kalbek)
 - [portfolio](https://kalbek.github.io/Portfolio/)
 - [linkedin](https://www.linkedin.com/in/kaleb-nuramo/)
+
+👤**Daniel Kigozi**
+
+- GitHub: [Daniel-Kigozi](https://github.com/Daniel-Kigozi)
+- Twitter: [@DanielKigozi15](https://twitter.com/@DanielKigozi15)
+- LinkedIn: [daniel-kigozi-375182208/](https://www.linkedin.com/in/daniel-kigozi-375182208/)
 
 
 
