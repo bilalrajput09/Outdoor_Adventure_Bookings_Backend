@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
   namespace :api do
     namespace :v1 do
       post 'login', to: 'users#login'
@@ -16,6 +14,13 @@ Rails.application.routes.draw do
       resources :reservations, only: [:create]
       post 'fetch_reservations', to: 'reservations#fetch_reservations'
       delete 'delete_reservation', to: 'reservations#destroy'
+
+      resources :adventures do
+        member do
+          get 'show' # Define the 'show' action for an individual adventure
+          delete 'destroy' # Define the 'destroy' action for deleting an adventure
+        end
+      end
     end
   end
 end
