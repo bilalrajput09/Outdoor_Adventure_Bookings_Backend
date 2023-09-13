@@ -72,10 +72,12 @@ cd Outdoor-Adventure-Bookings-Backend
 bundle install
 
 ### Usage
+- To migrate databases from schema run this command first
+```rails db:migrate```
 
 To run the project, execute the following command:
 
-rails server
+```rails server```
 
 ### Run tests
 
