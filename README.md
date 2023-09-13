@@ -167,4 +167,4 @@ I would like to acknowledge [Murat Korkmaz](https://www.behance.net/gallery/2642
 <!-- LICENSE -->
 
 License <a name="license"></a>
-This project is [MIT]("./license") licensed.
+This project is [MIT]("https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend/blob/dev/license") licensed.
