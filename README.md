@@ -62,14 +62,16 @@ To get a local copy up and running, follow these steps.
 
 Clone this repository to your desired folder:
 
+```
 git clone https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend.git
+```
 
 ### Install
 
 Install this project with:
 
-cd Outdoor-Adventure-Bookings-Backend
-bundle install
+```cd Outdoor-Adventure-Bookings-Backend```
+```bundle install```
 
 ### Usage
 - To migrate databases from schema run this command first:
@@ -82,7 +84,6 @@ bundle install
 
 - make sure first to correct your database connection settings in the ```database.yml``` file for both development and test sections
 - To run tests, run the following command:
-
 ```rake rswag```
 
 ### API Documentation
