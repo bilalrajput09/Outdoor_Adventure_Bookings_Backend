@@ -79,9 +79,10 @@ rails server
 
 ### Run tests
 
-To run tests, run the following command:
+- make sure first to correct your database connection settings in the ```database.yml``` file for both development and test sections
+- To run tests, run the following command:
 
-rspec
+```rake rswag```
 
 ### API Documentation
 
