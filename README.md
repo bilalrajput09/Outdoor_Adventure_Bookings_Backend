@@ -169,5 +169,7 @@ I would like to acknowledge [Murat Korkmaz](https://www.behance.net/gallery/2642
 
 <!-- LICENSE -->
 
-License <a name="license"></a>
-This project is [MIT]("./license") licensed.
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE.MD) licensed.
+
