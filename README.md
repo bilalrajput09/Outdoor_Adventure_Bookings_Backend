@@ -11,23 +11,25 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [🦘 Kanban Board](#kanban-board)
+  - [🧑‍🤝‍🧑 Project Participants](#project-participants)
+  - [🔗 Link to backend project](#frontend-project)
+  - [🚀 Link to Live Demo](#live-demo)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    - [🤖 Tech Stack](#tech-stack)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Api Documentation](#api-docs)
 - [👥 Authors](#authors)
+- [📺 Key Features](#key-features)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -36,32 +38,35 @@
 
 - Booking outdoor adventure is a platform where users can explore and book various thrilling outdoor activities and adventures. The website can offer a range of experiences such as hiking, rock climbing, kayaking, camping trips, wildlife tours, and more.
 
+## 🦘 Kanban Board <a name="kanban-board"></a>
+- [Click to see a screenshot of the initial state of the Kanban board](https://user-images.githubusercontent.com/116716918/264700602-ad8d7b99-d81a-40b2-834d-353edbebf730.png)
+
+## 🧑‍🤝‍🧑 Project Participants <a name="project-participants"></a>
+- There are 3 people involved in this project: [Bilal Ahmed](https://github.com/bilalrajput09), [Kaleb Bekele](https://github.com/kalbek) and [Daniel Kigozi](https://github.com/Daniel-Kigozi)
+
+## 🔗Link to Frontend Project <a name="frontend-project"></a>
+- [Link to Backend Project]([https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend](https://github.com/bilalrajput09/Outdoor-Adventure-Bookings)
+
+## 🚀 Link to Live preview (Deployed Project) <a name="live-demo"></a>
+- [Live Preview](https://outdoor-adventures-booking.onrender.com/)
+
 ## 🛠 Built With <a name="built-with"></a>
+### 🤖 Tech stack <a name="tech-stack"></a>
 
 - Ruby
 - Ruby on Rails
 - Postgresql
-
-## 🚀 Frontend Project <a name="live-demo"></a>
-
-- [Link to Frontend Project](https://github.com/bilalrajput09/Outdoor-Adventure-Bookings)
-
--[DEPLOYMENT LINK](https://outdoor-adventures-booking.onrender.com/)
-
-<!-- GETTING STARTED -->
-
+ 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-
+#### To get a local copy up and running, follow these steps.
 ```
   git clone https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend.git
 ```
 
-### Setup
+### Setup <a name="setup"></a>
 
-Clone this repository to your desired folder:
-
+#### Clone this repository to your desired folder
 ```
 git clone https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend.git
 ```
@@ -73,24 +78,38 @@ Install this project with:
 ```cd Outdoor-Adventure-Bookings-Backend```
 ```bundle install```
 
-### Usage
-- To migrate databases from schema run this command first:
+### Prerequsites <a name="prerequisites"></a>
+
+#### You need the following tools on your computer:
+-ruby 
+-postgresql
+
+### Install <a name="install"></a>
+
+#### Commands to install the project:
+
+```bundle install```
+
+### Usage <a name="usage"></a>
+
+#### To migrate databases from schema run this command first:
 ```rails db:migrate```
 
-- To run the project, execute the following command:
+#### To run the project, execute the following command:
 ```rails server```
 
-### Run tests
+### Run tests <a name="run-tests"></a>
 
 - make sure first to correct your database connection settings in the ```database.yml``` file for both development and test sections
-- To run tests, run the following command:
+#### To run tests, run the following command:
 ```rake rswag```
 
-### API Documentation
+### API Documentation <a name="api-docs"></a>
 
-https://outdoor-adventures.onrender.com/api-docs
+- [Click to access the Api Docs](https://outdoor-adventures.onrender.com/api-docs)
 
-<!-- AUTHORS -->
+### Authors <a name="authors"></a>
+#### Here are the team members who were involved in this project (it was an awesome journey):
 
 👤 **Bilal Ahmed**
 
@@ -110,7 +129,7 @@ LinkedIn: [LinkedIn](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
 - Twitter: [@DanielKigozi15](https://twitter.com/@DanielKigozi15)
 - LinkedIn: [daniel-kigozi-375182208/](https://www.linkedin.com/in/daniel-kigozi-375182208/)
 
-## Core Features <a name="core-features"></a>
+## 📺 Key Features <a name="key-features"></a>
 
 - User Registration and Authentication: Allow users to sign up and log in to the platform using their credentials.
 
@@ -163,13 +182,14 @@ Feel free to check the [issues page](https://github.com/bilalrajput09/Outdoor_Ad
 
 If you like this project please give it a star!
 
-<!-- ACKNOWLEDGEMENTS -->
+## ⭐️ Acknowledgements <a name="acknowledgements"></a>
 
-I would like to acknowledge [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) the author of the original design.
+- We would like to express our deepest gratitude to the entire Microverse staff. Their unwavering support and dedication have been instrumental in helping us reach this phase. They have gone above and beyond to ensure that we are well-equipped and prepared to land a decent job. We are truly grateful for their tireless efforts and unwavering commitment to our success.
+- We would like to express our gratitude to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign), the author of the original design on Behance.
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license"></a>
+## ⭐️ License <a name="license"></a>
 
 This project is [MIT](./LICENSE.MD) licensed.
 
