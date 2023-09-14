@@ -1,0 +1,149 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/adventures":
+    get:
+      summary: Get index of adventures
+      tags:
+      - Adventures
+      responses:
+        '200':
+          description: List of adventures retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    description:
+                      type: text
+                    picture:
+                      type: string
+                    created_at:
+                      type: datetime
+                    updated_at:
+                      type: datetime
+                  required:
+                  - id
+                  - name
+                  - picture
+                  - description
+    post:
+      summary: Create Adventure
+      tags:
+      - Adventures
+      parameters: []
+      responses:
+        '201':
+          description: Adventure created successfully
+        '204':
+          description: Adventure creation error.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                name:
+                  type: string
+                picture:
+                  type: string
+                description:
+                  type: text
+              required:
+              - name
+  "/api/v1/adventures/{id}":
+    delete:
+      summary: Delete Adventure
+      tags:
+      - Adventures
+      parameters:
+      - name: id
+        in: path
+        description: Adventure ID
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Adventure deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                - message
+        '404':
+          description: Adventure not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+  "/api/v1/reservations":
+    post:
+      summary: Reservations
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '201':
+          description: Reservation created successfully
+        '204':
+          description: No reservation found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currentUserID:
+                  type: integer
+                adventureID:
+                  type: integer
+              required:
+              - currentUserID
+              - adventureID
+  "/api/v1/fetch_reservations":
+    post:
+      summary: Fetch Reservations
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '200':
+          description: Reservations fetched successfully
+        '204':
+          description: No reservation found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currentUserID:
+                  type: integer
+              required:
+              - currentUserID
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000/
