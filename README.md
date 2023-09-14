@@ -13,7 +13,7 @@
 - [📖 About the Project](#about-project)
   - [🦘 Kanban Board](#kanban-board)
   - [🧑‍🤝‍🧑 Project Participants](#project-participants)
-  - [🔗 Link to backend project](#frontend-project)
+  - [🔗 Link to frontend project](#frontend-project)
   - [🚀 Link to Live Demo](#live-demo)
   - [🛠 Built With](#built-with)
     - [🤖 Tech Stack](#tech-stack)
@@ -45,7 +45,7 @@
 - There are 3 people involved in this project: [Bilal Ahmed](https://github.com/bilalrajput09), [Kaleb Bekele](https://github.com/kalbek) and [Daniel Kigozi](https://github.com/Daniel-Kigozi)
 
 ## 🔗Link to Frontend Project <a name="frontend-project"></a>
-- [Link to Backend Project]([https://github.com/bilalrajput09/Outdoor_Adventure_Bookings_Backend](https://github.com/bilalrajput09/Outdoor-Adventure-Bookings)
+- [Link to Frontend Project](https://github.com/bilalrajput09/Outdoor-Adventure-Bookings)
 
 ## 🚀 Link to Live preview (Deployed Project) <a name="live-demo"></a>
 - [Live Preview](https://outdoor-adventures-booking.onrender.com/)
@@ -81,8 +81,8 @@ Install this project with:
 ### Prerequsites <a name="prerequisites"></a>
 
 #### You need the following tools on your computer:
--ruby 
--postgresql
+- ruby 
+- PostgreSQL
 
 ### Install <a name="install"></a>
 
