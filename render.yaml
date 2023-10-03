@@ -1,12 +1,14 @@
 databases:
   - name: postgres
     ipAllowList: []
+    plan: free
     databaseName: outdoor_adventures_render
     user: outdoor_adventures_render
 
 services:
   - type: web
     name: outdoor_adventures
+    plan: free
     env: ruby
     buildCommand: './render-build.sh'
     startCommand: 'bundle exec rails s'
